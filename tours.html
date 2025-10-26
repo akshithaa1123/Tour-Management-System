@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Tour Management Application</h1>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tours.html" class="active">Tours</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main>
+<h2 class="main-heading">Explore Our Tours</h2>
+
+<section class="filters">
+<select id="locationFilter">
+<option value="">All Locations</option>
+</select>
+<input type="number" id="priceFilter" placeholder="Max Price (₹)">
+<button id="filterBtn">Filter</button>
+<button id="resetBtn">Reset</button>
+</section>
+
+<div class="card-container" id="toursContainer"></div>
+
+<!-- Booking Modal -->
+<div class="modal" id="bookingModal">
+<div class="modal-content">
+<span id="closeModal">&times;</span>
+<h3 id="modalTitle"></h3>
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<input type="number" id="people" placeholder="Number of People" required>
+<button type="submit">Confirm Booking</button>
+</form>
+</div>
+</div>
+
+</main>
+
+<footer>
+<p>Your Friendly Tour Guide</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
